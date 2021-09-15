@@ -14,4 +14,7 @@ class PaymentValueController {
     }
     return "Digite o valor da compra!";
   }
+
+  double getValue(String value) => double.parse(
+      value.replaceAll("R\$ ", "").replaceAll(".", "").replaceAll(",", "."));
 }
